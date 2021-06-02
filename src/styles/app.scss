@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+.breadcrumb {
+  margin-left: 11% !important;
+  margin-top: 1.5% !important;
+  margin-bottom: 1.5% !important;
+}
+.container {
+  width: 75%;
+  margin: auto;
+}
+.productListGrid {
+  display: flex;
+  flex-direction: row;
+}
+
+.productListHeader {
+  margin-top: 2%;
+  margin-bottom: 2.5%;
+}
+.rate {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+.rateP {
+  margin-left: 5px;
+}
+.ratingBox {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+@import './generalNav';
+@import './brandsNav';
+@import './categories';
+@import './product';
+@import './home';

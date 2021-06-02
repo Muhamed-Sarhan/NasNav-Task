@@ -1,0 +1,130 @@
+const data = {
+  products: [
+    {
+      id: 1,
+      title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      image: [
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093615_3d-trefoil-3-stripes-track-top_ge0841_standard-view.jpeg',
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093618_3d-trefoil-3-stripes-track-top_ge0841_walking-view.jpeg',
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093620_3d-trefoil-3-stripes-track-top_ge0841_back-center-view.jpeg',
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093623_3d-trefoil-3-stripes-track-top_ge0841_detail-view-3.jpeg',
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093617_3d-trefoil-3-stripes-track-top_ge0841_back-view.jpeg',
+      ],
+      mainImg:
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093615_3d-trefoil-3-stripes-track-top_ge0841_standard-view.jpeg',
+      brandImg: 'img/addidas.png',
+      gender: 'men',
+      rate: 4,
+      totalReview: 22,
+      sale: 30, //if sale < 0 hidden
+      currentPrice: 9999,
+      oldPrice: 9999,
+      currency: 'LE',
+      size: [
+        { id: 1, title: 'small' },
+        { id: 2, title: 'medium' },
+        { id: 3, title: 'large' },
+        { id: 4, title: 'xlarge' },
+        { id: 5, title: 'xxlarge' },
+      ],
+      color: ['img/1.jpeg', 'img/6.jpeg'],
+      quantity: 1,
+      addedToCart: false,
+    },
+    {
+      id: 1,
+      title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      image: [
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093615_3d-trefoil-3-stripes-track-top_ge0841_standard-view.jpeg',
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093618_3d-trefoil-3-stripes-track-top_ge0841_walking-view.jpeg',
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093620_3d-trefoil-3-stripes-track-top_ge0841_back-center-view.jpeg',
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093623_3d-trefoil-3-stripes-track-top_ge0841_detail-view-3.jpeg',
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093617_3d-trefoil-3-stripes-track-top_ge0841_back-view.jpeg',
+      ],
+      mainImg:
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093615_3d-trefoil-3-stripes-track-top_ge0841_standard-view.jpeg',
+      brandImg: 'img/addidas.png',
+      gender: 'men',
+      rate: 4,
+      totalReview: 22,
+      sale: 30, //if sale < 0 hidden
+      currentPrice: 9999,
+      oldPrice: 9999,
+      currency: 'LE',
+      size: [
+        { id: 1, title: 'small' },
+        { id: 2, title: 'medium' },
+        { id: 3, title: 'large' },
+        { id: 4, title: 'xlarge' },
+        { id: 5, title: 'xxlarge' },
+      ],
+      color: ['img/1.jpeg', 'img/6.jpeg'],
+      quantity: 1,
+      addedToCart: false,
+    },
+    {
+      id: 1,
+      title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      image: [
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093615_3d-trefoil-3-stripes-track-top_ge0841_standard-view.jpeg',
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093618_3d-trefoil-3-stripes-track-top_ge0841_walking-view.jpeg',
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093620_3d-trefoil-3-stripes-track-top_ge0841_back-center-view.jpeg',
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093623_3d-trefoil-3-stripes-track-top_ge0841_detail-view-3.jpeg',
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093617_3d-trefoil-3-stripes-track-top_ge0841_back-view.jpeg',
+      ],
+      mainImg:
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093615_3d-trefoil-3-stripes-track-top_ge0841_standard-view.jpeg',
+      brandImg: 'img/addidas.png',
+      gender: 'men',
+      rate: 4,
+      totalReview: 22,
+      sale: 30, //if sale < 0 hidden
+      currentPrice: 9999,
+      oldPrice: 9999,
+      currency: 'LE',
+      size: [
+        { id: 1, title: 'small' },
+        { id: 2, title: 'medium' },
+        { id: 3, title: 'large' },
+        { id: 4, title: 'xlarge' },
+        { id: 5, title: 'xxlarge' },
+      ],
+      color: ['img/1.jpeg', 'img/6.jpeg'],
+      quantity: 1,
+      addedToCart: false,
+    },
+    {
+      id: 1,
+      title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      image: [
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093615_3d-trefoil-3-stripes-track-top_ge0841_standard-view.jpeg',
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093618_3d-trefoil-3-stripes-track-top_ge0841_walking-view.jpeg',
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093620_3d-trefoil-3-stripes-track-top_ge0841_back-center-view.jpeg',
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093623_3d-trefoil-3-stripes-track-top_ge0841_detail-view-3.jpeg',
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093617_3d-trefoil-3-stripes-track-top_ge0841_back-view.jpeg',
+      ],
+      mainImg:
+        'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093615_3d-trefoil-3-stripes-track-top_ge0841_standard-view.jpeg',
+      brandImg: 'img/addidas.png',
+      gender: 'men',
+      rate: 4,
+      totalReview: 22,
+      sale: 30, //if sale < 0 hidden
+      currentPrice: 9999,
+      oldPrice: 9999,
+      currency: 'LE',
+      size: [
+        { id: 1, title: 'small' },
+        { id: 2, title: 'medium' },
+        { id: 3, title: 'large' },
+        { id: 4, title: 'xlarge' },
+        { id: 5, title: 'xxlarge' },
+      ],
+      color: ['img/1.jpeg', 'img/6.jpeg'],
+      quantity: 1,
+      addedToCart: false,
+    },
+  ],
+};
+
+export default data;
