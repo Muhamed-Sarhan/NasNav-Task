@@ -2,9 +2,12 @@ import React from 'react';
 import adidas from '../img/addidas.png';
 import SimpleRating from './Rating';
 
-export default function Product({ product }) {
+export default function Product({ product, handleSelectedProduct }) {
   return (
-    <div className='cardStyle'>
+    <div
+      className='cardStyle'
+      onClick={() => handleSelectedProduct(product.id)}
+    >
       <img src={product.mainImg} className='imgCard' alt='s' />
       <h3>
         <strong>{product.title}</strong>
@@ -27,10 +30,15 @@ export default function Product({ product }) {
         </div>
 
         <div>
-          <img src={adidas} className='imgBrand' />
+          <img src={adidas} alt='adidas' className='imgBrand' />
         </div>
       </div>
-      <SimpleRating product={product} />
+      <div className='ratingBox'>
+        <SimpleRating value={product.rate} isReadOnly />
+        <h3 className='rateP'>
+          <strong>{product.rate} of 5</strong>
+        </h3>
+      </div>
       <div className='mallBox'>
         <h5>
           PickedUp From <strong className='mallName'>Genena Mall</strong>

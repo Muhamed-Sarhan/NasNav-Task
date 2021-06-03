@@ -1,7 +1,7 @@
 const data = {
   products: [
     {
-      id: 1,
+      id: 0,
       title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
       image: [
         'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093615_3d-trefoil-3-stripes-track-top_ge0841_standard-view.jpeg',
@@ -13,7 +13,7 @@ const data = {
       mainImg:
         'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093615_3d-trefoil-3-stripes-track-top_ge0841_standard-view.jpeg',
       brandImg: 'img/addidas.png',
-      gender: 'men',
+      gender: 'Men',
       rate: 4,
       totalReview: 22,
       sale: 30, //if sale < 0 hidden
@@ -44,7 +44,7 @@ const data = {
       mainImg:
         'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093615_3d-trefoil-3-stripes-track-top_ge0841_standard-view.jpeg',
       brandImg: 'img/addidas.png',
-      gender: 'men',
+      gender: 'Men',
       rate: 4,
       totalReview: 22,
       sale: 30, //if sale < 0 hidden
@@ -63,7 +63,7 @@ const data = {
       addedToCart: false,
     },
     {
-      id: 1,
+      id: 2,
       title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
       image: [
         'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093615_3d-trefoil-3-stripes-track-top_ge0841_standard-view.jpeg',
@@ -75,7 +75,7 @@ const data = {
       mainImg:
         'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093615_3d-trefoil-3-stripes-track-top_ge0841_standard-view.jpeg',
       brandImg: 'img/addidas.png',
-      gender: 'men',
+      gender: 'Men',
       rate: 4,
       totalReview: 22,
       sale: 30, //if sale < 0 hidden
@@ -94,7 +94,7 @@ const data = {
       addedToCart: false,
     },
     {
-      id: 1,
+      id: 3,
       title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
       image: [
         'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093615_3d-trefoil-3-stripes-track-top_ge0841_standard-view.jpeg',
@@ -106,7 +106,7 @@ const data = {
       mainImg:
         'https://st-adidas-egy.mncdn.com/content/images/thumbs/0093615_3d-trefoil-3-stripes-track-top_ge0841_standard-view.jpeg',
       brandImg: 'img/addidas.png',
-      gender: 'men',
+      gender: 'Men',
       rate: 4,
       totalReview: 22,
       sale: 30, //if sale < 0 hidden

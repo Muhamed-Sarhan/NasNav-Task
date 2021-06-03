@@ -1,14 +1,43 @@
-import React from 'react';
+import React, { Component } from 'react';
 import adidas from '../img/addidas.png';
+import HomeDataSection from './HomeDataSection';
 
-export default function Home({ products }) {
-  return (
-    <div className='homeAll'>
-      <div className='homeImg'>Hello</div>
-      <div className='homeData'>
-        <img src={adidas} className='homeBrandImg' />
-        <h3>{products.title}</h3>
+class Home extends Component {
+  state = {
+    theProduct: {},
+  };
+
+  selectedProduct(id, theProduct) {
+    const itemSelected = theProduct.filter((item) => {
+      return item.id === id;
+    });
+    this.setState({
+      theProduct: itemSelected[0],
+    });
+  }
+
+  componentDidMount() {
+    const { products, id } = this.props;
+    this.selectedProduct(id, products);
+  }
+
+  render() {
+    const { theProduct } = this.state;
+    const { handleIncermentToCart } = this.props;
+
+    console.log(theProduct, '85xk');
+    return (
+      <div className='homeAll'>
+        <div className='homeImg'>Hello</div>
+        <div className='homeData'>
+          <img src={adidas} alt='adidas' className='homeBrandImg' />
+          <HomeDataSection
+            theProduct={theProduct}
+            handleIncermentToCart={handleIncermentToCart}
+          />
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
+export default Home;

@@ -52,7 +52,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function BrandsNav() {
+export default function BrandsNav({ totalCartProducts }) {
   const classes = useStyles();
 
   return (
@@ -74,13 +74,13 @@ export default function BrandsNav() {
           </div>
 
           <div>
-            <img src={adidas} className='brandImg' />
+            <img src={adidas} alt='adidas' className='brandImg' />
           </div>
 
           <div />
           <div>
             <IconButton aria-label='show 4 new mails' color='inherit'>
-              <Badge badgeContent={1} color='secondary'>
+              <Badge badgeContent={totalCartProducts} color='secondary'>
                 <ShoppingBasketIcon />
               </Badge>
             </IconButton>
