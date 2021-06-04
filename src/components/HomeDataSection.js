@@ -3,6 +3,7 @@ import SimpleRating from './Rating';
 import image from '../img/1.jpeg';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
+import { Divider } from '@material-ui/core';
 
 class HomeDataSection extends Component {
   state = {
@@ -22,11 +23,10 @@ class HomeDataSection extends Component {
       color: selectedColor,
       quantity: quantity,
     };
-    console.log('-----------', newCartItem);
+    console.log('------!!!!!!-----', newCartItem);
     const productfromStorage = localStorage.getItem('cart');
     if (productfromStorage) {
       let carTProducts = JSON.parse(productfromStorage);
-      console.log('000000', typeof carTProducts);
       carTProducts.push(newCartItem);
       localStorage.setItem('cart', JSON.stringify(carTProducts));
       console.log('11111', carTProducts);
@@ -55,7 +55,19 @@ class HomeDataSection extends Component {
 
   render() {
     const { theProduct } = this.props;
-    const { title, gender } = theProduct;
+    const {
+      title,
+      gender,
+      rate,
+      totalReview,
+      currentPrice,
+      oldPrice,
+      sale,
+      color,
+      size,
+    } = theProduct;
+
+    console.log(theProduct, 'TmT');
 
     return (
       <div>
@@ -63,38 +75,40 @@ class HomeDataSection extends Component {
         <h4>{gender}</h4>
         <div className='ratingBoxHome'>
           <SimpleRating value={4} isReadOnly />
-          <h3 className='rateP'>
-            <strong>4 of 5</strong>
+          <h3 className='rateD'>
+            <strong>{rate} of 5</strong>
           </h3>
           <h3 className='ratingTotal'>
-            <strong>22 Rates</strong>
+            <strong>{totalReview} Rates</strong>
           </h3>
         </div>
 
         <div className='ratingBoxHome'>
-          <h2 className='currenrPriceHome'>9999 LE</h2>
-          <h3 className='oldPriceHome'>9999 LE</h3>
+          <h2 className='currenrPriceHome'>{currentPrice} LE</h2>
+          <h3 className='oldPriceHome'>{oldPrice} LE</h3>
           <h3 className='saleOnHome'>
-            <strong className='saleBox'>30 %</strong>
+            <strong className='saleBox'>{sale} %</strong>
           </h3>
         </div>
-        <hr className='line' />
+        <Divider className='line' />
         <div>
           <h2>Size</h2>
+
           <div className='circleSize'>
             <p className='size'>
               <strong>small</strong>
             </p>
           </div>
         </div>
-        <hr className='line' />
+        <Divider className='line' />
         <div>
           <h2>Colors</h2>
-          <div>
+
+          <div className='imgShape'>
             <img src={image} alt='color1' className='imgSize' />
           </div>
         </div>
-        <hr className='line' />
+        <Divider className='line' />
         <div className='quantity'>
           <h2>Quantity</h2>
           <div className='quantity-control'>

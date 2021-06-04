@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Product from './Product';
+import Skeleton from 'react-loading-skeleton';
 
 class ProductList extends Component {
   state = {
@@ -29,7 +30,8 @@ class ProductList extends Component {
     console.log(products, 'kjhgfd');
     return (
       <main className='productList'>
-        <h2 className='productListHeader'>Products</h2>
+        <h2 className='productListHeader'>Similar Products</h2>
+        <h4 className='productListP'>you may like these products also</h4>
         <div className='productListGrid'>
           {!isLoading ? (
             products.map((product) => (
@@ -40,7 +42,31 @@ class ProductList extends Component {
               />
             ))
           ) : (
-            <h1>None</h1>
+            <div className='skelton'>
+              <div className='skeltonItem'>
+                <Skeleton duration={3} height={400} width={1000} />
+                <div>
+                  <h2>
+                    <Skeleton duration={3} width={500} />
+                  </h2>
+                  <p>
+                    <Skeleton duration={3} width={800} />
+                  </p>
+                  <p>
+                    <Skeleton duration={3} width={700} />
+                  </p>
+                  <p>
+                    <Skeleton duration={3} width={400} />
+                  </p>
+                  <p>
+                    <Skeleton duration={3} width={900} />
+                  </p>
+                  <p>
+                    <Skeleton duration={3} width={800} />
+                  </p>
+                </div>
+              </div>
+            </div>
           )}
         </div>
       </main>

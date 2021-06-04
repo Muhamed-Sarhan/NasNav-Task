@@ -5,9 +5,10 @@ import './styles/app.scss';
 import Categories from './components/Categories';
 import Breadcrumb from './components/Breadcrumbs';
 import { Divider } from '@material-ui/core';
-import data from './utils/data';
+import data from './services/data';
 import ProductList from './components/ProductList';
 import Home from './components/Home';
+import Footer from './components/footer';
 
 const { products } = data;
 class App extends Component {
@@ -61,6 +62,7 @@ class App extends Component {
             handleSelectedProduct={this.handleSelectedProduct}
           />
         </div>
+        <Footer />
       </div>
     );
   }

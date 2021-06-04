@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
-import Badge from '@material-ui/core/Badge';
 import SearchIcon from '@material-ui/icons/Search';
-import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import PersonIcon from '@material-ui/icons/Person';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import adidas from '../img/addidas.png';
+import Cart from './cart';
 
 const useStyles = makeStyles((theme) => ({
   search: {
@@ -54,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function BrandsNav({ totalCartProducts }) {
   const classes = useStyles();
+  const [isToggle, setIsToggle] = useState(false);
 
   return (
     <div style={{ marginTop: '9vh' }}>
@@ -80,9 +81,11 @@ export default function BrandsNav({ totalCartProducts }) {
           <div />
           <div>
             <IconButton aria-label='show 4 new mails' color='inherit'>
-              <Badge badgeContent={totalCartProducts} color='secondary'>
-                <ShoppingBasketIcon />
-              </Badge>
+              <Cart
+                isToggle={isToggle}
+                setIsToggle={setIsToggle}
+                totalCartProducts={totalCartProducts}
+              />
             </IconButton>
             <Typography className='cartInfo' variant='p' noWrap>
               Cart

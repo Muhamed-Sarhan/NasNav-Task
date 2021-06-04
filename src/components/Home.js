@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import adidas from '../img/addidas.png';
 import HomeDataSection from './HomeDataSection';
+import HomeImageSection from './HomeImageSection';
 
 class Home extends Component {
   state = {
@@ -28,7 +29,9 @@ class Home extends Component {
     console.log(theProduct, '85xk');
     return (
       <div className='homeAll'>
-        <div className='homeImg'>Hello</div>
+        <div className='homeImg'>
+          <HomeImageSection theProduct={theProduct} />
+        </div>
         <div className='homeData'>
           <img src={adidas} alt='adidas' className='homeBrandImg' />
           <HomeDataSection

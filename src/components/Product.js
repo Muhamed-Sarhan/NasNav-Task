@@ -23,8 +23,8 @@ export default function Product({ product, handleSelectedProduct }) {
                 {product.oldPrice} {product.currency}
               </strong>
             </h4>
-            <div>
-              <strong className='saleBox'>{product.sale} %</strong>
+            <div className='saleBox'>
+              <strong>{product.sale} %</strong>
             </div>
           </div>
         </div>
